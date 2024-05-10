@@ -59,7 +59,7 @@ public class AuthController {
 
         userService.saveUser(userDto);
         request.login(userDto.getEmail(), userDto.getPassword());
-        return "/shop";
+        return "admin/shop";
     }
 
     // handler method to handle list of users

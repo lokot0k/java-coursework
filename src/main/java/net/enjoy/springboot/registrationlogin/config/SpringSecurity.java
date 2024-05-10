@@ -31,7 +31,7 @@ public class SpringSecurity {
         http.headers(headers -> headers.frameOptions().disable())
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((authorize) ->
-                        authorize.requestMatchers("/register/**").anonymous()
+                        authorize.requestMatchers("/register/**").permitAll()
                                 .requestMatchers("/index", "/").permitAll()
                                 .requestMatchers("/db-console/**").permitAll()
                                 .requestMatchers("/shop/**").permitAll()
